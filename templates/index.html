@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoboFolio - AI Portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    {% assets "css" %}
+    <link rel="stylesheet" href="{{ ASSET_URL }}">
+    {% endassets %}
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container nav-content">
+            <div class="logo">RoboFolio</div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/projects">Projects</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content animate">
+                <h1 class="hero-title">Innovation Through Automation</h1>
+                <h2 class="hero-subtitle">AI & Robotics Engineer</h2>
+                <p class="hero-description">
+                    Crafting the future through advanced robotics and artificial intelligence solutions. 
+                    Transforming ideas into intelligent, automated realities.
+                </p>
+                <a href="/projects" class="cta-button">View Projects</a>
+            </div>
+            <div class="model-container">
+                <model-viewer
+                    src="https://modelviewer.dev/shared-assets/models/RobotExpressive.glb"
+                    alt="A 3D model of an expressive robot"
+                    auto-rotate
+                    camera-controls
+                    animation-name="Wave"
+                    style="width: 100%; height: 100%;"
+                    exposure="1"
+                    shadow-intensity="1"
+                    environment-image="https://modelviewer.dev/shared-assets/environments/aircraft_workshop_01_1k.hdr">
+                </model-viewer>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project cards will be dynamically populated -->
+            </div>
+        </div>
+    </section>
+
+    <section class="skills">
+        <div class="container">
+            <h2 class="section-title">Core Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h3>Robotics</h3>
+                    <p>Advanced robotics systems and control</p>
+                </div>
+                <div class="skill-item">
+                    <h3>AI/ML</h3>
+                    <p>Deep learning and neural networks</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Computer Vision</h3>
+                    <p>Image processing and recognition</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% assets "js" %}
+    <script src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+</body>
+</html>
